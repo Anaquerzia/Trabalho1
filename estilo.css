@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ body {
+    background-image: url(./imagens/Sala1.jpg);
+    background-size:cover;
+    background-position:horizontal;
+    
+  } 
+  
+  
+  h1.center {
+    position:fixed;
+    z-index: 10;
+    font-size: 4rem; /* tamanho da letra */
+    color:#f0f0f3; /* cor do texto */
+    background-color: #23232e;
+    text-align: center; /* centralizar o texto */
+    margin: auto; /* centralizar horizontalmente */
+    position: absolute; /* posicionar por cima da imagem */
+    top: 50%; /* posicionar no meio da altura do header */
+    left: 50%; /* posicionar no meio da largura do header */
+    display: flex;
+    align-items: center; /* alinhar verticalmente */
+    transform: translate(-90%, -50%); /* ajustar a posição para ficar exatamente no meio */
+  }
+ 
+/*Configurando a menu a */
+a {
+    color: #fff;
+    /*tirar o subinhado */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/*Efeito ao passaar o mouse no menu a*/
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    /*Espaçamento entre a logo e os menus */
+    letter-spacing: 4px;
+}
+
+nav {
+    /*Coloca a lista de menu e o logo um do lado do outro*/
+    display: flex;
+    /* Faz com que o espaço ao redor seja a metade do espaço entre eles */
+    justify-content: center;
+    /*Alinha verticalmente*/
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #23232e;
+    /*Altura resposiva que se adapta ao dispositivo */
+    height: 8vh;
+}
+
+main {
+    /* Referencia a imagem para o bakgrounde e alinha a altura e largura dela (x,Y) no centro*/
+    background: url(./imagens/Sala1.jpg) no-repeat center center;
+    /*Ainha o tamanho da imagen */
+    background-size: cover;
+    height: 92vh;
+
+}
+
+/* configurando os itens que estão em ul*/
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+/*configurando iten por item do nav*/
+.nav-list li {
+    letter-spacing: 3px;
+    /*Afastanto um item do outro */
+    margin-left: 32px;
+}
+
+
+.mobile-menu {
+    /*Em dispositivos menores o menu some e aparece somente o icone do harburguer*/
+    display: none;
+    /*Mostra a mãozinha do mouse quando passa sobre o menu*/
+    cursor: pointer;
+}
+
+/*Neste menu altermos as linhas da div menu*/
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+/*Nessa seção vamos alterar a navegação para quando a tela tiver tamanhos menores  */
+@media (max-width: 999px) {
+    body {
+        /*Se a imagem tranborda , ele irá ocutar*/
+        overflow-x: hidden;
+    }
+
+.nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /*A navegação vai para fora do body quando for clicada*/
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+ }
+
+.nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+.mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+/* Melhorando a opacidade dos menus, o navlinkFade serve para dar um efeito de aparecimento da direita para esquerda*/
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /*Essas três */
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+   
+   .mobile-menu.active .line2 {
+    opacity: 0;
+  } 
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+ 

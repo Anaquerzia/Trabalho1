@@ -1,0 +1,69 @@
+
+/* Esse form foi criado somente para editar a pagina de agendamentos de serviços  */
+form {
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+  }
+  
+  input[type="text"]:invalid {
+    border-color: red;
+  }
+  
+  input[type="text"]:invalid + .error-message {
+    display: block;
+  }
+  
+  button[type="submit"],
+  button[type="reset"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  button[type="submit"]:hover,
+  button[type="reset"]:hover {
+    background-color: #3e8e41;
+  }
+  
