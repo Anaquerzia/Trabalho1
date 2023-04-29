@@ -1,33 +1,33 @@
 
 /* Esse form foi criado somente para editar a pagina de agendamentos de serviços  */
-form {
+/* form {
     margin: 0 auto;
     width: 80%;
   }
-  
+  /* formação do h1 */
   h1 {
     font-size: 24px;
     margin-bottom: 20px;
   }
-  
+  /* Formatação geral dos campos fiedset( do gupo de agendamento ), onde estão os campos de nome, serviço , telefone e etc  */
   fieldset {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
   }
-  
+  /* Formatação da legenda dos elementos de  <fieldset>*/
   legend {
     font-weight: bold;
     margin-bottom: 10px;
   }
-  
+  /* Formatação das Label que são os campos, nome do cliente , telefone e etc */
   label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
   }
-  
+  /* Essa parte é um seletor que seleciona todos os elementos <input> do tipo texto do arquivo html  */
   input[type="text"],
   select {
     width: 100%;
@@ -36,34 +36,88 @@ form {
     padding: 5px;
     margin-bottom: 10px;
   }
-  
+  /* Essa configuração coloca a cor vemelho ao aparecer uma mensgem de erro  */
   .error-message {
     color: red;
     font-size: 12px;
     display: none;
   }
-  
+  /* Essa configuração coloca a borda em vermelho para mostrar que o campo deve ser preenchido */
   input[type="text"]:invalid {
     border-color: red;
   }
-  
+  /* Se um dos campos estiver ou com dados inválidos ou com uma mensagem de erro , o envio é bloqueado  */
   input[type="text"]:invalid + .error-message {
     display: block;
   }
-  
-  button[type="submit"],
+  /* configurações dos botões agendar e reset, porque são do tipo button */
+  button[type="button"],
   button[type="reset"] {
-    background-color: #4CAF50;
+    background-color: #23232e;
     color: white;
     padding: 10px 20px;
     border: none;
+    /* coloca a borda arendonda */
     border-radius: 5px;
+    /* coloca o cursor como mãozinha ao passar sobre os botões  */
     cursor: pointer;
     margin-right: 10px;
   }
-  
-  button[type="submit"]:hover,
+  /* habilita o efeito hover ( efeito ao passar o mouse sobre os botões) */
+  button[type="button"]:hover,
   button[type="reset"]:hover {
-    background-color: #3e8e41;
+    background-color: #0f611d;
+  }
+   
+
+ /* configurações de cores, tamanho, espaçamento e fonte  do corpo */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #3f3e3e;
+    margin: 0;
+    padding: 0;
+  }
+  /* configurações de cores, tamanho, espaçamento do itens que estão dentro da seção */ 
+  section {
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #ddd;
+  }
+ 
+  /*configuração do tempo do paragrafo   */
+  p {
+    margin-bottom: 20px;
   }
   
+  label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  /* configurações dos inputs(butões)  */
+  input[type="text"],
+  input[type="tel"],
+  select,
+  input[type="date"],
+  input[type="time"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ddd;
+    font-size: 16px;
+    color: #333;
+  }
+  /* configurações dos inputs(butões)  */
+  input[type="button"],
+  input[type="reset"] {
+    padding: 10px 20px;
+    margin-right: 10px
+  }

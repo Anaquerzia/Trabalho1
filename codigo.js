@@ -46,3 +46,18 @@ class MobileNavbar {
     ".nav-list li",
   );
   mobileNavbar.init();
+
+// Estilização do arquivo agenda.html
+function agendarHorario() {
+    // Obter os valores dos campos do formulário através dos seus IDs
+    var nome = document.getElementById("nome").value;
+    var telefone = document.getElementById("telefone").value;
+    var servico = document.getElementById("servico").value;
+    var data = document.getElementById("data").value;
+    var horario = document.getElementById("horario").value;
+
+    // Preencher o elemento div com os dados do agendamento
+    var agendamento = document.getElementById("agendamento");
+    // Vamos imprimir o valor de cada variável através de suas IDs, e concatenamos e mostramos na tela
+    agendamento.innerHTML = "<p>Horário agendado com sucesso!</p><p>Nome: " + nome + "</p><p>Telefone: " + telefone + "</p><p>Serviço: " + servico + "</p><p>Data: " + data + "</p><p>Horário: " + horario + "</p>";
+}
