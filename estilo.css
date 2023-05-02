@@ -26,8 +26,22 @@
     align-items: center; /* alinhar verticalmente */
     transform: translate(-90%, -50%); /* ajustar a posição para ficar exatamente no meio */
   }
- 
-/*Configurando a menu a */
+ /* Formatação para telas maiores que 768px */
+@media only screen and (min-width: 768px) {
+  h1.center {
+    font-size: 48px;
+  }
+}
+
+/* Formatação para telas menores que 768px */
+@media only screen and (max-width: 767px) {
+  h1.center {
+    font-size: 32px;
+  }
+}
+
+
+/*Configurando o menu li a */
 a {
     color: #fff;
     /*tirar o subinhado */
@@ -48,7 +62,7 @@ a:hover {
 }
 
 nav {
-    /*Coloca a lista de menu e o logo um do lado do outro*/
+    /*Coloca a lista de "menu" e o logo um do lado do outro*/
     display: flex;
     /* Faz com que o espaço ao redor seja a metade do espaço entre eles */
     justify-content: center;
@@ -69,7 +83,7 @@ main {
 
 }
 
-/* configurando os itens que estão em ul*/
+/* configurando os itens que estão em ul do menu */
 .nav-list {
     list-style: none;
     display: flex;
@@ -239,3 +253,4 @@ main {
    height:auto;
      
   } 
+
