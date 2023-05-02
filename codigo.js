@@ -61,3 +61,15 @@ function agendarHorario() {
     // Vamos imprimir o valor de cada variável através de suas IDs, e concatenamos e mostramos na tela
     agendamento.innerHTML = "<p>Horário agendado com sucesso!</p><p>Nome: " + nome + "</p><p>Telefone: " + telefone + "</p><p>Serviço: " + servico + "</p><p>Data: " + data + "</p><p>Horário: " + horario + "</p>";
 }
+
+// Seleciona o link "Contato" no menu
+const linkContato = document.querySelector('a[href="#contato"]');
+
+// Seleciona o elemento de rodapé com o ID "contato"
+const footerContato = document.querySelector('footer#contato');
+
+// Adiciona um evento de clique ao link "Contato"
+linkContato.addEventListener('click', () => {
+  // Exibe o rodapé
+  footerContato.style.display = 'block';
+});
